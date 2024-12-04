@@ -1,0 +1,53 @@
+name: Build and Check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Revisa el repositorio
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Configura Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts'
+          cache: 'pnpm'
+
+      # Instala pnpm
+      - name: Setup pnpm
+        run: npm install -g pnpm
+
+      # Instala dependencias
+      - name: Install dependencies
+        run: pnpm install
+
+      # Ejecuta el build
+      - name: Build project
+        run: pnpm build
+
+      # Configurar Git para hacer commits automáticos
+      - name: Setup Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      # Añade y commitea los cambios generados por el build
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "chore: update build artifacts [skip ci]" || echo "No changes to commit"
+
+      # Sube los cambios a la rama principal
+      - name: Push changes
+        run: git push origin main
