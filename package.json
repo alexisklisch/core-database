@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm ./dist -rf && tsc",
     "start:ts": "tsx src/index.ts"
   },
   "keywords": [],
