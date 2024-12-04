@@ -16,18 +16,18 @@ jobs:
       # Revisa el repositorio
       - name: Checkout Repository
         uses: actions/checkout@v3
-
+        
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9 # Cambia a la versión de pnpm que prefieras, o usa 'latest'
+          
       # Configura Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
           cache: 'pnpm'
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9 # Cambia a la versión de pnpm que prefieras, o usa 'latest'
 
       # Instala dependencias
       - name: Install dependencies
