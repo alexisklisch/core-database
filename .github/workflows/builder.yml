@@ -49,6 +49,6 @@ jobs:
           git add .
           git commit -m "chore: update build artifacts [skip ci]" || echo "No changes to commit"
 
-      # Sube los cambios a la rama principal
+      # Sube los cambios a la rama principal (Agregar permisos en repositorio)
       - name: Push changes
         run: git push origin main
