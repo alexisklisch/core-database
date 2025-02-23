@@ -1,4 +1,4 @@
-/*import { db, schema } from "../src/index"
+import { db, schema } from "../src/index"
 
 const {
   propertiesSchema,
@@ -28,11 +28,11 @@ const newProperty = await db.insert(propertiesSchema).values({
 }).returning()
 
 
-console.log(newProperty)*/
+console.log(newProperty)
 
 /* ------------------------------------------------- */
 
-
+/*
 import { db } from "../src";
 
 const data = await db.query.propertiesSchema.findMany({
@@ -40,4 +40,4 @@ const data = await db.query.propertiesSchema.findMany({
     publication: true
   }
 })
-console.log(data)
+console.log(data)*/
