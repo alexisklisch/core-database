@@ -1,10 +1,10 @@
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { createPropertyId } from "../../handlers/createPropertyId";
+import { createPropertyId } from "../../handlers/createPropertyId.js";
 import { relations } from "drizzle-orm";
-import { publicationsSchema } from "../schema";
+import { publicationsSchema } from "../schema.js";
 export const propertiesSchema = sqliteTable("properties", {
     propertyId: text('property_id', { length: 10 }).$defaultFn(() => createPropertyId()).primaryKey(),
-    publicationId: int('publication_id').notNull().unique(),
+    publicationId: int('publication_id').notNull(),
     userId: text('user_id').$defaultFn(() => crypto.randomUUID()).notNull(),
     shortTitle: text('short_title', { length: 64 }).default('Descripción corta para recordar la propiedad').notNull(),
     createdAt: text('created_at').$defaultFn(() => new Date().toISOString()).notNull(),

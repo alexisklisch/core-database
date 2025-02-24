@@ -1,6 +1,6 @@
 import { relations } from "drizzle-orm";
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { propertiesSchema } from "./properties.schema";
+import { propertiesSchema } from "./properties.schema.js";
 export const publicationsSchema = sqliteTable("publications", {
     publicationId: int('publication_id').primaryKey({ autoIncrement: true }),
     publicationTitle: text('publication_title').notNull(),

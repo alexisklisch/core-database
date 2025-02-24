@@ -1,5 +1,5 @@
 import { drizzle } from 'drizzle-orm/libsql';
-import * as schema from './db/schema';
+import * as schema from './db/schema.js';
 export const db = drizzle({
     connection: {
         url: process.env.TURSO_DATABASE_URL || 'file:test/test.db',
@@ -7,4 +7,4 @@ export const db = drizzle({
     },
     schema
 });
-export * as schema from './db/schema';
+export * as schema from './db/schema.js';
