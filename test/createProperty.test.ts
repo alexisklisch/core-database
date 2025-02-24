@@ -5,8 +5,8 @@ const {
   publicationsSchema
 } = schema
 
-const [newPublication] = await db.insert(publicationsSchema).values({
-  publicationTitleID: 1,
+/*const [ { publicationId } ] = await db.insert(publicationsSchema).values({
+  publicationTitle: 'A donde vamos a parar',
   publicationDescriptionID: 1,
   realEstateId: 'medina-klisch',
   publicationOperationID: 1,
@@ -15,20 +15,19 @@ const [newPublication] = await db.insert(publicationsSchema).values({
   publicationStatus: 'ACTIVE',
   publicationProvider: 'argenprop',
   publicationUrl: 'https://www.argenprop.com/propiedades/medina-klisch'
-}).returning()
+}).returning({ publicationId: publicationsSchema.publicationId })*/
 
 
-const newProperty = await db.insert(propertiesSchema).values({
-  publicationId: newPublication.publicationId,
-  shortTitle: 'La casa de Cacho',
+const [{ newPropertyId }] = await db.insert(propertiesSchema).values({
+  publicationId: 1,
   userId: crypto.randomUUID(),
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
   expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString(),
-}).returning()
+}).returning({ newPropertyId: propertiesSchema.propertyId })
 
+console.log(newPropertyId)
 
-console.log(newProperty)
 
 /* ------------------------------------------------- */
 
