@@ -1,10 +1,10 @@
 import { relations } from "drizzle-orm";
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { propertiesSchema } from "./propertiesSchema";
+import { propertiesSchema } from "./properties.schema"
 
 export const publicationsSchema = sqliteTable("publications", {
   publicationId: int('publication_id').primaryKey({ autoIncrement: true }),
-  publicationTitleID: int('publication_title_id').notNull(),
+  publicationTitle: text('publication_title').notNull(),
   publicationDescriptionID: int('publication_description_id').notNull(),
   realEstateId: text('real_estate_id').default('flyers'),
   publicationOperationID: int('publication_operation_id').notNull(),

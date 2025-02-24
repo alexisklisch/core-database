@@ -7,7 +7,7 @@ export const propertiesSchema = sqliteTable("properties", {
   propertyId: text('property_id', {length: 10}).$defaultFn(() => createPropertyId()).primaryKey(),
   publicationId: int('publication_id').notNull().unique(),
   userId: text('user_id').$defaultFn(() => crypto.randomUUID()).notNull(),
-  shortTitle: text('short_title').notNull(),
+  shortTitle: text('short_title', {length: 64}).default('Descripción corta para recordar la propiedad').notNull(),
   createdAt: text('created_at').$defaultFn(() => new Date().toISOString()).notNull(),
   updatedAt: text('updated_at').$defaultFn(() => new Date().toISOString()).notNull(),
   expiresAt: text('expires_at').$defaultFn(() => new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString()).notNull(),

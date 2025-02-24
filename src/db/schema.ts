@@ -1,2 +1,2 @@
-export * from './schemas/propertiesSchema'
-export * from './schemas/publicationsSchema'
+export * from './schemas/properties.schema'
+export * from './schemas/publications.schema'
