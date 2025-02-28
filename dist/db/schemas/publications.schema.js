@@ -5,8 +5,8 @@ import { publicationAttributesSchema } from "./publicationAttributes.schema.js";
 export const publicationsSchema = sqliteTable("publications", {
     publicationId: int('publication_id').primaryKey({ autoIncrement: true }),
     publicationTitle: text('publication_title').notNull(),
-    publicationDescriptionShort: int('publication_description_short').notNull(),
-    publicationDescriptionRich: int('publication_description_rich').notNull(),
+    publicationDescriptionShort: text('publication_description_short').notNull(),
+    publicationDescriptionRich: text('publication_description_rich').notNull(),
     realEstateId: text('real_estate_id').default('flyers'),
     publicationOperationId: int('publication_operation_id').notNull(),
     publicationLocationId: int('publication_location_id').notNull(),

@@ -41,37 +41,41 @@ export declare const publicationsSchema: import("drizzle-orm/sqlite-core").SQLit
         publicationDescriptionShort: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_description_short";
             tableName: "publications";
-            dataType: "number";
-            columnType: "SQLiteInteger";
-            data: number;
-            driverParam: number;
+            dataType: "string";
+            columnType: "SQLiteText";
+            data: string;
+            driverParam: string;
             notNull: true;
             hasDefault: false;
             isPrimaryKey: false;
             isAutoincrement: false;
             hasRuntimeDefault: false;
-            enumValues: undefined;
+            enumValues: [string, ...string[]];
             baseColumn: never;
             identity: undefined;
             generated: undefined;
-        }, {}, {}>;
+        }, {}, {
+            length: number | undefined;
+        }>;
         publicationDescriptionRich: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_description_rich";
             tableName: "publications";
-            dataType: "number";
-            columnType: "SQLiteInteger";
-            data: number;
-            driverParam: number;
+            dataType: "string";
+            columnType: "SQLiteText";
+            data: string;
+            driverParam: string;
             notNull: true;
             hasDefault: false;
             isPrimaryKey: false;
             isAutoincrement: false;
             hasRuntimeDefault: false;
-            enumValues: undefined;
+            enumValues: [string, ...string[]];
             baseColumn: never;
             identity: undefined;
             generated: undefined;
-        }, {}, {}>;
+        }, {}, {
+            length: number | undefined;
+        }>;
         realEstateId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "real_estate_id";
             tableName: "publications";
