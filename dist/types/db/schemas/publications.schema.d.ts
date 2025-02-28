@@ -38,8 +38,25 @@ export declare const publicationsSchema: import("drizzle-orm/sqlite-core").SQLit
         }, {}, {
             length: number | undefined;
         }>;
-        publicationDescriptionID: import("drizzle-orm/sqlite-core").SQLiteColumn<{
-            name: "publication_description_id";
+        publicationDescriptionShort: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "publication_description_short";
+            tableName: "publications";
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
+            notNull: true;
+            hasDefault: false;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        publicationDescriptionRich: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "publication_description_rich";
             tableName: "publications";
             dataType: "number";
             columnType: "SQLiteInteger";
@@ -74,7 +91,7 @@ export declare const publicationsSchema: import("drizzle-orm/sqlite-core").SQLit
         }, {}, {
             length: number | undefined;
         }>;
-        publicationOperationID: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+        publicationOperationId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_operation_id";
             tableName: "publications";
             dataType: "number";
@@ -91,7 +108,7 @@ export declare const publicationsSchema: import("drizzle-orm/sqlite-core").SQLit
             identity: undefined;
             generated: undefined;
         }, {}, {}>;
-        publicationLocationID: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+        publicationLocationId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_location_id";
             tableName: "publications";
             dataType: "number";
@@ -108,7 +125,7 @@ export declare const publicationsSchema: import("drizzle-orm/sqlite-core").SQLit
             identity: undefined;
             generated: undefined;
         }, {}, {}>;
-        publicationAttributesID: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+        publicationAttributesId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_attributes_id";
             tableName: "publications";
             dataType: "number";
@@ -182,9 +199,30 @@ export declare const publicationsSchema: import("drizzle-orm/sqlite-core").SQLit
         }, {}, {
             length: number | undefined;
         }>;
+        updatedAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "updated_at";
+            tableName: "publications";
+            dataType: "string";
+            columnType: "SQLiteText";
+            data: string;
+            driverParam: string;
+            notNull: true;
+            hasDefault: true;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: true;
+            enumValues: [string, ...string[]];
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {
+            length: number | undefined;
+        }>;
     };
     dialect: "sqlite";
 }>;
 export declare const publicationsRelations: import("drizzle-orm").Relations<"publications", {
     property: import("drizzle-orm").One<"properties", false>;
+    publicationLocationRelation: import("drizzle-orm").One<"publications", true>;
+    publicationAttributeRelation: import("drizzle-orm").One<"publications", true>;
 }>;

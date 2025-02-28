@@ -28,7 +28,7 @@ export declare const propertiesSchema: import("drizzle-orm/sqlite-core").SQLiteT
             columnType: "SQLiteInteger";
             data: number;
             driverParam: number;
-            notNull: true;
+            notNull: false;
             hasDefault: false;
             isPrimaryKey: false;
             isAutoincrement: false;
@@ -75,6 +75,25 @@ export declare const propertiesSchema: import("drizzle-orm/sqlite-core").SQLiteT
             generated: undefined;
         }, {}, {
             length: 64;
+        }>;
+        propertyCreationStatus: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "property_creation_status";
+            tableName: "properties";
+            dataType: "string";
+            columnType: "SQLiteText";
+            data: "RUNNING" | "FINISHED" | "ERROR";
+            driverParam: string;
+            notNull: true;
+            hasDefault: true;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: ["RUNNING", "FINISHED", "ERROR"];
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {
+            length: 12;
         }>;
         createdAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "created_at";
@@ -137,5 +156,5 @@ export declare const propertiesSchema: import("drizzle-orm/sqlite-core").SQLiteT
     dialect: "sqlite";
 }>;
 export declare const propertiesRelations: import("drizzle-orm").Relations<"properties", {
-    publication: import("drizzle-orm").One<"publications", true>;
+    publication: import("drizzle-orm").One<"publications", false>;
 }>;
