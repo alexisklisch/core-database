@@ -11,9 +11,9 @@ export const db = drizzle({
 })
 
 export * as schema from './db/schema'
-export const utils = {
+export {
   eq,
   or,
   and,
   like
-}
+} from 'drizzle-orm'
