@@ -1,4 +1,3 @@
-import { eq, or, like, and } from 'drizzle-orm'
 import { drizzle } from 'drizzle-orm/libsql'
 import * as schema from './db/schema'
 

@@ -2,7 +2,7 @@ import { relations } from "drizzle-orm";
 import { int, real, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { publicationsSchema } from "../schema"
 
-export const publicationLocationsSchema = sqliteTable("publications", {
+export const publicationLocationsSchema = sqliteTable("publication_locations", {
   publicationLocationId: int('publication_location_id').primaryKey({ autoIncrement: true }),
   displayAddress: text('publication_display_address').notNull(),
   addressName: text('publication_address_name'),
@@ -16,5 +16,5 @@ export const publicationLocationsSchema = sqliteTable("publications", {
 })
 
 export const publicationLocationsRelations = relations(publicationLocationsSchema, ({ one }) => ({
-  property: one(publicationsSchema)
+  publication: one(publicationsSchema)
 }))
