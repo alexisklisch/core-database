@@ -1,10 +1,10 @@
 export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core").SQLiteTableWithColumns<{
-    name: "publications";
+    name: "publication_locations";
     schema: undefined;
     columns: {
         publicationLocationId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_location_id";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -21,7 +21,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }, {}, {}>;
         displayAddress: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_display_address";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "string";
             columnType: "SQLiteText";
             data: string;
@@ -40,7 +40,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }>;
         addressName: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_address_name";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "string";
             columnType: "SQLiteText";
             data: string;
@@ -59,7 +59,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }>;
         addressNumber: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_address_number";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "string";
             columnType: "SQLiteText";
             data: string;
@@ -78,7 +78,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }>;
         neighborhood: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_neighborhood";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "string";
             columnType: "SQLiteText";
             data: string;
@@ -97,7 +97,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }>;
         city: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_city";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "string";
             columnType: "SQLiteText";
             data: string;
@@ -116,7 +116,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }>;
         province: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_province";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "string";
             columnType: "SQLiteText";
             data: string;
@@ -135,7 +135,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }>;
         postalCode: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_postal_code";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "string";
             columnType: "SQLiteText";
             data: string;
@@ -154,7 +154,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }>;
         latitude: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_latitude";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "number";
             columnType: "SQLiteReal";
             data: number;
@@ -171,7 +171,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
         }, {}, {}>;
         longitude: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_latitude";
-            tableName: "publications";
+            tableName: "publication_locations";
             dataType: "number";
             columnType: "SQLiteReal";
             data: number;
@@ -189,6 +189,6 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
     };
     dialect: "sqlite";
 }>;
-export declare const publicationLocationsRelations: import("drizzle-orm").Relations<"publications", {
-    property: import("drizzle-orm").One<"publications", false>;
+export declare const publicationLocationsRelations: import("drizzle-orm").Relations<"publication_locations", {
+    publication: import("drizzle-orm").One<"publications", false>;
 }>;

@@ -1,10 +1,10 @@
 export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-core").SQLiteTableWithColumns<{
-    name: "publications";
+    name: "publication_attributes";
     schema: undefined;
     columns: {
         publicationAttributesId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_attributes_id";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -21,7 +21,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         typology: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_typology";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "string";
             columnType: "SQLiteText";
             data: "APARTMENT" | "HOUSE" | "CONDOMINIUM" | "LAND" | "RETAIL_SPACE" | "FARM" | "GARAGE" | "BUSINESS" | "WAREHOUSE" | "HOTEL" | "OFFICE" | "COUNTRY_HOUSE" | "OTHER";
@@ -40,7 +40,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }>;
         rooms: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_rooms";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -57,7 +57,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         bedrooms: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_bedrooms";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -74,7 +74,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         bathrooms: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_bathrooms";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -91,7 +91,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         toilets: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_toilets";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -108,7 +108,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         garages: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_garages";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -125,7 +125,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         antiquity: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_antiquity";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -142,7 +142,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         coveredSurface: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_covered_surface";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -159,7 +159,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         groundSurface: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_ground_surface";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -176,7 +176,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         totalSurface: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_total_surface";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -193,7 +193,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         orientation: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_orientation";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "string";
             columnType: "SQLiteText";
             data: "N" | "NE" | "E" | "SE" | "S" | "SW" | "W" | "NW";
@@ -212,7 +212,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }>;
         condition: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_condition";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "string";
             columnType: "SQLiteText";
             data: "NEW" | "GOOD" | "REGULAR" | "TO_RENOVATE" | "TO_RECYCLE";
@@ -231,7 +231,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }>;
         floor: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_floor";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -248,7 +248,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         floors: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_floors";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -265,7 +265,7 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
         }, {}, {}>;
         otherFeatures: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_other_features";
-            tableName: "publications";
+            tableName: "publication_attributes";
             dataType: "string";
             columnType: "SQLiteText";
             data: string;
@@ -285,6 +285,6 @@ export declare const publicationAttributesSchema: import("drizzle-orm/sqlite-cor
     };
     dialect: "sqlite";
 }>;
-export declare const publicationAttributesRelations: import("drizzle-orm").Relations<"publications", {
-    property: import("drizzle-orm").One<"publications", false>;
+export declare const publicationAttributesRelations: import("drizzle-orm").Relations<"publication_attributes", {
+    publication: import("drizzle-orm").One<"publications", false>;
 }>;

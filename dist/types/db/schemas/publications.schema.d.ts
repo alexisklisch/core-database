@@ -227,6 +227,6 @@ export declare const publicationsSchema: import("drizzle-orm/sqlite-core").SQLit
 }>;
 export declare const publicationsRelations: import("drizzle-orm").Relations<"publications", {
     property: import("drizzle-orm").One<"properties", false>;
-    publicationLocationRelation: import("drizzle-orm").One<"publications", true>;
-    publicationAttributeRelation: import("drizzle-orm").One<"publications", true>;
+    publicationLocationRelation: import("drizzle-orm").One<"publication_locations", true>;
+    publicationAttributeRelation: import("drizzle-orm").One<"publication_attributes", true>;
 }>;

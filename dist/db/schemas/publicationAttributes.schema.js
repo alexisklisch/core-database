@@ -1,7 +1,7 @@
 import { relations } from "drizzle-orm";
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
 import { publicationsSchema } from "../schema.js";
-export const publicationAttributesSchema = sqliteTable("publications", {
+export const publicationAttributesSchema = sqliteTable("publication_attributes", {
     publicationAttributesId: int('publication_attributes_id').primaryKey({ autoIncrement: true }),
     typology: text('publication_typology', { length: 12, enum: ['APARTMENT', 'HOUSE', 'CONDOMINIUM', 'LAND', 'RETAIL_SPACE', 'FARM', 'GARAGE', 'BUSINESS', 'WAREHOUSE', 'HOTEL', 'OFFICE', 'COUNTRY_HOUSE', 'OTHER'] }).default('OTHER').notNull(),
     rooms: int('publication_rooms'),
@@ -20,5 +20,5 @@ export const publicationAttributesSchema = sqliteTable("publications", {
     otherFeatures: text('publication_other_features'),
 });
 export const publicationAttributesRelations = relations(publicationAttributesSchema, ({ one }) => ({
-    property: one(publicationsSchema)
+    publication: one(publicationsSchema)
 }));
