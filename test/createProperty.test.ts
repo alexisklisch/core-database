@@ -1,4 +1,6 @@
 import { db, schema } from "../src/index"
+import 'dotenv/config';
+
 
 const {
   propertiesSchema,
@@ -18,13 +20,7 @@ const {
 }).returning({ publicationId: publicationsSchema.publicationId })*/
 
 
-const [{ newPropertyId }] = await db.insert(propertiesSchema).values({
-  publicationId: 1,
-  userId: crypto.randomUUID(),
-  createdAt: new Date().toISOString(),
-  updatedAt: new Date().toISOString(),
-  expiresAt: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString(),
-}).returning({ newPropertyId: propertiesSchema.propertyId })
+const [{ newPropertyId }] = await db.insert(propertiesSchema).values({}).returning({ newPropertyId: propertiesSchema.propertyId })
 
 console.log(newPropertyId)
 

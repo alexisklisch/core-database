@@ -14,6 +14,7 @@
   "scripts": {
     "build": "rm ./dist -rf && tsc && tsc-alias",
     "generate": "npx drizzle-kit generate",
+    "testdb": "tsx src/test.ts",
     "migrate": "npx drizzle-kit migrate",
     "push": "npx drizzle-kit push",
     "test": "tsx test/createProperty.test.ts"
