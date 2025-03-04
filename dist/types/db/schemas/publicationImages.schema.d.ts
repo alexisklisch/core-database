@@ -2,7 +2,7 @@ export declare const publicationImagesSchema: import("drizzle-orm/sqlite-core").
     name: "publication_images";
     schema: undefined;
     columns: {
-        publicationImagesId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+        publicationImageId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "publication_images_id";
             tableName: "publication_images";
             dataType: "string";
