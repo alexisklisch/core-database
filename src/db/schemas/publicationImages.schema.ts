@@ -7,7 +7,7 @@ export const publicationImagesSchema = sqliteTable("publication_images", {
   imageDescription: text('publication_image_description'),
   isUpgradable: int('publication_image_is_upgradabele', { mode: "boolean" }),
   priority: int('publication_image_priority').notNull(),
-  publicationId: int('publication_id')
+  publicationId: int('publication_id').notNull()
 })
 
 export const publicationImagesRelations = relations(publicationImagesSchema, ({ one }) => ({
