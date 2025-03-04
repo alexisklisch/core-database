@@ -229,4 +229,5 @@ export declare const publicationsRelations: import("drizzle-orm").Relations<"pub
     property: import("drizzle-orm").One<"properties", false>;
     publicationLocationRelation: import("drizzle-orm").One<"publication_locations", true>;
     publicationAttributeRelation: import("drizzle-orm").One<"publication_attributes", true>;
+    publicationImagesRelation: import("drizzle-orm").Many<"publication_images">;
 }>;

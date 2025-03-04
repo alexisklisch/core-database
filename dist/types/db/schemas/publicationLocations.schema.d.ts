@@ -170,7 +170,7 @@ export declare const publicationLocationsSchema: import("drizzle-orm/sqlite-core
             generated: undefined;
         }, {}, {}>;
         longitude: import("drizzle-orm/sqlite-core").SQLiteColumn<{
-            name: "publication_latitude";
+            name: "publication_longitude";
             tableName: "publication_locations";
             dataType: "number";
             columnType: "SQLiteReal";
