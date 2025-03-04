@@ -81,7 +81,7 @@ export declare const publicationImagesSchema: import("drizzle-orm/sqlite-core").
             columnType: "SQLiteInteger";
             data: number;
             driverParam: number;
-            notNull: false;
+            notNull: true;
             hasDefault: false;
             isPrimaryKey: false;
             isAutoincrement: false;
@@ -95,5 +95,5 @@ export declare const publicationImagesSchema: import("drizzle-orm/sqlite-core").
     dialect: "sqlite";
 }>;
 export declare const publicationImagesRelations: import("drizzle-orm").Relations<"publication_images", {
-    publication: import("drizzle-orm").One<"publications", false>;
+    publication: import("drizzle-orm").One<"publications", true>;
 }>;
