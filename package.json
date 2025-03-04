@@ -13,8 +13,9 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "rm ./dist -rf && tsc && tsc-alias",
+    "build-prod": "rm dist/ -rf && tsc && tsc-alias && cp package.json dist/ && cd dist && pnpm install --node-linker=hoisted --prod",
+    "build-zip": "pnpm build-prod && cd dist && zip -r ../dist_upload-to-db.zip .",
     "generate": "npx drizzle-kit generate",
-    "testdb": "tsx src/test.ts",
     "migrate": "npx drizzle-kit migrate",
     "push": "npx drizzle-kit push",
     "test": "tsx test/createProperty.test.ts"

@@ -11,7 +11,7 @@ export const publicationLocationsSchema = sqliteTable("publication_locations", {
     province: text('publication_province'),
     postalCode: text('publication_postal_code'),
     latitude: real('publication_latitude'),
-    longitude: real('publication_latitude')
+    longitude: real('publication_longitude')
 });
 export const publicationLocationsRelations = relations(publicationLocationsSchema, ({ one }) => ({
     publication: one(publicationsSchema)

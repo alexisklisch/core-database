@@ -1,7 +1,11 @@
 import { relations } from "drizzle-orm";
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
-import { propertiesSchema, publicationLocationsSchema } from "../schema"
-import { publicationAttributesSchema } from "./publicationAttributes.schema";
+import {
+  propertiesSchema,
+  publicationLocationsSchema,
+  publicationAttributesSchema,
+  publicationImagesSchema
+} from "../schema"
 
 export const publicationsSchema = sqliteTable("publications", {
   publicationId: int('publication_id').primaryKey({ autoIncrement: true }),
@@ -18,8 +22,9 @@ export const publicationsSchema = sqliteTable("publications", {
   updatedAt: text('updated_at').$defaultFn(() => new Date().toISOString()).notNull()
 })
 
-export const publicationsRelations = relations(publicationsSchema, ({ one }) => ({
+export const publicationsRelations = relations(publicationsSchema, ({ one, many }) => ({
   property: one(propertiesSchema),
   publicationLocationRelation: one(publicationLocationsSchema, { fields: [publicationsSchema.publicationLocationId], references: [publicationLocationsSchema.publicationLocationId] }),
-  publicationAttributeRelation: one(publicationAttributesSchema, { fields: [publicationsSchema.publicationAttributesId], references: [publicationAttributesSchema.publicationAttributesId] })
+  publicationAttributeRelation: one(publicationAttributesSchema, { fields: [publicationsSchema.publicationAttributesId], references: [publicationAttributesSchema.publicationAttributesId] }),
+  publicationImagesRelation: many(publicationImagesSchema)
 }))
