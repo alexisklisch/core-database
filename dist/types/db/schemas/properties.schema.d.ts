@@ -46,10 +46,10 @@ export declare const propertiesSchema: import("drizzle-orm/sqlite-core").SQLiteT
             data: string;
             driverParam: string;
             notNull: true;
-            hasDefault: true;
+            hasDefault: false;
             isPrimaryKey: false;
             isAutoincrement: false;
-            hasRuntimeDefault: true;
+            hasRuntimeDefault: false;
             enumValues: [string, ...string[]];
             baseColumn: never;
             identity: undefined;
