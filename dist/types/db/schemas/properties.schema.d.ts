@@ -98,60 +98,54 @@ export declare const propertiesSchema: import("drizzle-orm/sqlite-core").SQLiteT
         createdAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "created_at";
             tableName: "properties";
-            dataType: "string";
-            columnType: "SQLiteText";
-            data: string;
-            driverParam: string;
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
             notNull: true;
             hasDefault: true;
             isPrimaryKey: false;
             isAutoincrement: false;
             hasRuntimeDefault: true;
-            enumValues: [string, ...string[]];
+            enumValues: undefined;
             baseColumn: never;
             identity: undefined;
             generated: undefined;
-        }, {}, {
-            length: number | undefined;
-        }>;
+        }, {}, {}>;
         updatedAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "updated_at";
             tableName: "properties";
-            dataType: "string";
-            columnType: "SQLiteText";
-            data: string;
-            driverParam: string;
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
             notNull: true;
             hasDefault: true;
             isPrimaryKey: false;
             isAutoincrement: false;
             hasRuntimeDefault: true;
-            enumValues: [string, ...string[]];
+            enumValues: undefined;
             baseColumn: never;
             identity: undefined;
             generated: undefined;
-        }, {}, {
-            length: number | undefined;
-        }>;
+        }, {}, {}>;
         expiresAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "expires_at";
             tableName: "properties";
-            dataType: "string";
-            columnType: "SQLiteText";
-            data: string;
-            driverParam: string;
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
             notNull: true;
             hasDefault: true;
             isPrimaryKey: false;
             isAutoincrement: false;
             hasRuntimeDefault: true;
-            enumValues: [string, ...string[]];
+            enumValues: undefined;
             baseColumn: never;
             identity: undefined;
             generated: undefined;
-        }, {}, {
-            length: number | undefined;
-        }>;
+        }, {}, {}>;
     };
     dialect: "sqlite";
 }>;

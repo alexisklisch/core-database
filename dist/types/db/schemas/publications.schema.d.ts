@@ -206,22 +206,20 @@ export declare const publicationsSchema: import("drizzle-orm/sqlite-core").SQLit
         updatedAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "updated_at";
             tableName: "publications";
-            dataType: "string";
-            columnType: "SQLiteText";
-            data: string;
-            driverParam: string;
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
             notNull: true;
             hasDefault: true;
             isPrimaryKey: false;
             isAutoincrement: false;
             hasRuntimeDefault: true;
-            enumValues: [string, ...string[]];
+            enumValues: undefined;
             baseColumn: never;
             identity: undefined;
             generated: undefined;
-        }, {}, {
-            length: number | undefined;
-        }>;
+        }, {}, {}>;
     };
     dialect: "sqlite";
 }>;
@@ -230,4 +228,5 @@ export declare const publicationsRelations: import("drizzle-orm").Relations<"pub
     publicationLocationRelation: import("drizzle-orm").One<"publication_locations", true>;
     publicationAttributeRelation: import("drizzle-orm").One<"publication_attributes", true>;
     publicationImagesRelation: import("drizzle-orm").Many<"publication_images">;
+    publicationOperationRelation: import("drizzle-orm").One<"publication_operations", true>;
 }>;

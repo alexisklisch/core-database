@@ -1,0 +1,100 @@
+export declare const publicationOperationsSchema: import("drizzle-orm/sqlite-core").SQLiteTableWithColumns<{
+    name: "publication_operations";
+    schema: undefined;
+    columns: {
+        publicationOperationId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "publication_operation_id";
+            tableName: "publication_operations";
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
+            notNull: true;
+            hasDefault: true;
+            isPrimaryKey: true;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        type: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "publication_operation_type";
+            tableName: "publication_operations";
+            dataType: "string";
+            columnType: "SQLiteText";
+            data: "rent" | "sell" | "temporal";
+            driverParam: string;
+            notNull: false;
+            hasDefault: false;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: ["rent", "sell", "temporal"];
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {
+            length: 8;
+        }>;
+        listingPriceId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "listing_price_id";
+            tableName: "publication_operations";
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
+            notNull: false;
+            hasDefault: false;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        maintenanceFeePriceId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "maintenance_fee_price_id";
+            tableName: "publication_operations";
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
+            notNull: false;
+            hasDefault: false;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        oldPriceId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "old_price_id";
+            tableName: "publication_operations";
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
+            notNull: false;
+            hasDefault: false;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+    };
+    dialect: "sqlite";
+}>;
+export declare const publicationOperationsRelations: import("drizzle-orm").Relations<"publication_operations", {
+    publication: import("drizzle-orm").One<"publications", false>;
+    listingOperationPrice: import("drizzle-orm").One<"operation_prices", false>;
+    maintenanceFeeOperationPrice: import("drizzle-orm").One<"operation_prices", false>;
+    oldOperationPrice: import("drizzle-orm").One<"operation_prices", false>;
+}>;
