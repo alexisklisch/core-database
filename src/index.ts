@@ -15,5 +15,8 @@ export {
   eq,
   or,
   and,
-  like
+  like,
+  aliasedRelation,
+  aliasedTable,
+  aliasedTableColumn
 } from 'drizzle-orm'
