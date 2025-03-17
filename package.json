@@ -19,7 +19,8 @@
     "generate": "npx drizzle-kit generate",
     "migrate": "npx drizzle-kit migrate",
     "push": "npx drizzle-kit push",
-    "test": "tsx test/getProperties.test.ts"
+    "test": "tsx test/createProperty.test.ts",
+    "test:credit": "tsx test/chargeCredit.test.ts"
   },
   "keywords": [],
   "author": "",

@@ -20,7 +20,7 @@ const {
 }).returning({ publicationId: publicationsSchema.publicationId })*/
 
 
-const [{ newPropertyId }] = await db.insert(propertiesSchema).values({}).returning({ newPropertyId: propertiesSchema.propertyId })
+const [{ newPropertyId }] = await db.insert(propertiesSchema).values({ userId: crypto.randomUUID() }).returning({ newPropertyId: propertiesSchema.propertyId })
 
 console.log(newPropertyId)
 
