@@ -89,23 +89,25 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
             identity: undefined;
             generated: undefined;
         }, {}, {}>;
-        creditId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
-            name: "credit_id";
+        userId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "user_id";
             tableName: "credit_charges";
-            dataType: "number";
-            columnType: "SQLiteInteger";
-            data: number;
-            driverParam: number;
+            dataType: "string";
+            columnType: "SQLiteText";
+            data: string;
+            driverParam: string;
             notNull: true;
             hasDefault: false;
             isPrimaryKey: false;
             isAutoincrement: false;
             hasRuntimeDefault: false;
-            enumValues: undefined;
+            enumValues: [string, ...string[]];
             baseColumn: never;
             identity: undefined;
             generated: undefined;
-        }, {}, {}>;
+        }, {}, {
+            length: number | undefined;
+        }>;
         createdAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "created_at";
             tableName: "credit_charges";
@@ -142,7 +144,4 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
         }, {}, {}>;
     };
     dialect: "sqlite";
-}>;
-export declare const creditChargesRelations: import("drizzle-orm").Relations<"credit_charges", {
-    credit: import("drizzle-orm").One<"credits", true>;
 }>;
