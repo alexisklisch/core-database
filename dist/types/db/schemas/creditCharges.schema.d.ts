@@ -1,10 +1,10 @@
 export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLiteTableWithColumns<{
-    name: "creditCharges";
+    name: "credit_charges";
     schema: undefined;
     columns: {
         creditChargeId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "credit_charge_id";
-            tableName: "creditCharges";
+            tableName: "credit_charges";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -21,7 +21,7 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
         }, {}, {}>;
         quantity: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "credit_charge_quantity";
-            tableName: "creditCharges";
+            tableName: "credit_charges";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -37,8 +37,8 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
             generated: undefined;
         }, {}, {}>;
         unitPrice: import("drizzle-orm/sqlite-core").SQLiteColumn<{
-            name: "user_id";
-            tableName: "creditCharges";
+            name: "unit_price";
+            tableName: "credit_charges";
             dataType: "number";
             columnType: "SQLiteReal";
             data: number;
@@ -55,7 +55,7 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
         }, {}, {}>;
         chargeType: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "credit_charge_type";
-            tableName: "creditCharges";
+            tableName: "credit_charges";
             dataType: "string";
             columnType: "SQLiteText";
             data: "purchase" | "gift" | "promo";
@@ -74,7 +74,7 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
         }>;
         discount: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "credit_charge_discount";
-            tableName: "creditCharges";
+            tableName: "credit_charges";
             dataType: "number";
             columnType: "SQLiteReal";
             data: number;
@@ -91,7 +91,7 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
         }, {}, {}>;
         creditId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "credit_id";
-            tableName: "creditCharges";
+            tableName: "credit_charges";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -108,7 +108,7 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
         }, {}, {}>;
         createdAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "created_at";
-            tableName: "creditCharges";
+            tableName: "credit_charges";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -125,7 +125,7 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
         }, {}, {}>;
         expireAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "expire_at";
-            tableName: "creditCharges";
+            tableName: "credit_charges";
             dataType: "number";
             columnType: "SQLiteInteger";
             data: number;
@@ -143,6 +143,6 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
     };
     dialect: "sqlite";
 }>;
-export declare const creditChargesRelations: import("drizzle-orm").Relations<"creditCharges", {
+export declare const creditChargesRelations: import("drizzle-orm").Relations<"credit_charges", {
     credit: import("drizzle-orm").One<"credits", true>;
 }>;

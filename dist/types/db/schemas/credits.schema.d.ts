@@ -59,5 +59,5 @@ export declare const creditsSchema: import("drizzle-orm/sqlite-core").SQLiteTabl
     dialect: "sqlite";
 }>;
 export declare const creditsRelations: import("drizzle-orm").Relations<"credits", {
-    charges: import("drizzle-orm").Many<"creditCharges">;
+    charges: import("drizzle-orm").Many<"credit_charges">;
 }>;
