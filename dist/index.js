@@ -9,4 +9,4 @@ export const db = drizzle({
     schema
 });
 export * as schema from './db/schema.js';
-export { eq, or, and, like, ne, gt, gte, lt, lte, aliasedRelation, aliasedTable, aliasedTableColumn } from 'drizzle-orm';
+export { eq, ne, gt, gte, lt, lte, exists, notExists, isNull, isNotNull, between, notBetween, and, or, like, notLike, not, aliasedRelation, aliasedTable, aliasedTableColumn } from 'drizzle-orm';
