@@ -1,7 +1,7 @@
 import { db, eq, schema } from '../src/index'
 
 const userId = 'asdfg-12345-asdfgx'
-await db.transaction(async (trx) => {
+/* await db.transaction(async (trx) => {
   // Busca los créditos del usuario
   let credits = await trx.query.creditsSchema.findFirst({
     where: eq(schema.creditsSchema.userId, userId)
@@ -32,4 +32,11 @@ await db.transaction(async (trx) => {
       quantity: credits.quantity! + newChargeQ!
     })
     .where(eq(schema.creditsSchema.creditId, credits.creditId))
+}) */
+
+await db.insert(schema.creditChargesSchema).values({
+  chargeType: 'gift',
+  quantity: 434,
+  unitPrice: .58,
+  userId
 })

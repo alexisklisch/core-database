@@ -10,12 +10,13 @@ export const creditChargesSchema = sqliteTable("credit_charges", {
   unitPrice: real('unit_price').notNull(),
   chargeType: text('credit_charge_type', { enum: ['purchase', 'gift', 'promo'] }).notNull(),
   discount: real('credit_charge_discount').default(0),
-  //creditId: int('credit_id').notNull(),
-  userId: text('user_id').notNull(),
+  creditId: int('credit_id').notNull(),
+  isExpired: int('is_expired', { mode: "boolean" }).default(false),
+  chargedAt: int('charged_at'),
   createdAt: int('created_at').default(+now).notNull(),
   expireAt: int('expire_at').default(+now + 1000 * 60 * 60 * 24 * 365)
 })
 
-/* export const creditChargesRelations = relations(creditChargesSchema, ({ one }) => ({
+export const creditChargesRelations = relations(creditChargesSchema, ({ one }) => ({
   credit: one(creditsSchema, { fields: [creditChargesSchema.creditId], references: [creditsSchema.creditId] })
-})) */
+}))
