@@ -89,25 +89,57 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
             identity: undefined;
             generated: undefined;
         }, {}, {}>;
-        userId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
-            name: "user_id";
+        creditId: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "credit_id";
             tableName: "credit_charges";
-            dataType: "string";
-            columnType: "SQLiteText";
-            data: string;
-            driverParam: string;
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
             notNull: true;
             hasDefault: false;
             isPrimaryKey: false;
             isAutoincrement: false;
             hasRuntimeDefault: false;
-            enumValues: [string, ...string[]];
+            enumValues: undefined;
             baseColumn: never;
             identity: undefined;
             generated: undefined;
-        }, {}, {
-            length: number | undefined;
-        }>;
+        }, {}, {}>;
+        isExpired: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "is_expired";
+            tableName: "credit_charges";
+            dataType: "boolean";
+            columnType: "SQLiteBoolean";
+            data: boolean;
+            driverParam: number;
+            notNull: false;
+            hasDefault: true;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
+        chargedAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
+            name: "charged_at";
+            tableName: "credit_charges";
+            dataType: "number";
+            columnType: "SQLiteInteger";
+            data: number;
+            driverParam: number;
+            notNull: false;
+            hasDefault: false;
+            isPrimaryKey: false;
+            isAutoincrement: false;
+            hasRuntimeDefault: false;
+            enumValues: undefined;
+            baseColumn: never;
+            identity: undefined;
+            generated: undefined;
+        }, {}, {}>;
         createdAt: import("drizzle-orm/sqlite-core").SQLiteColumn<{
             name: "created_at";
             tableName: "credit_charges";
@@ -144,4 +176,7 @@ export declare const creditChargesSchema: import("drizzle-orm/sqlite-core").SQLi
         }, {}, {}>;
     };
     dialect: "sqlite";
+}>;
+export declare const creditChargesRelations: import("drizzle-orm").Relations<"credit_charges", {
+    credit: import("drizzle-orm").One<"credits", true>;
 }>;
