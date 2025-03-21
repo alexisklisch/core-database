@@ -16,6 +16,11 @@ export {
   or,
   and,
   like,
+  ne,
+  gt,
+  gte,
+  lt,
+  lte,
   aliasedRelation,
   aliasedTable,
   aliasedTableColumn
