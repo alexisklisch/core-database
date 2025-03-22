@@ -12,6 +12,8 @@ export const db = drizzle({
 
 export * as schema from './db/schema'
 export {
+  asc,
+  desc,
   eq,
   ne,
   gt,
