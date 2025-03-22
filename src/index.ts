@@ -11,27 +11,4 @@ export const db = drizzle({
 })
 
 export * as schema from './db/schema'
-export {
-  asc,
-  desc,
-  eq,
-  ne,
-  gt,
-  gte,
-  lt,
-  lte,
-  exists,
-  notExists,
-  isNull,
-  isNotNull,
-  between,
-  notBetween,
-  and,
-  or,
-  like,
-  notLike,
-  not,
-  aliasedRelation,
-  aliasedTable,
-  aliasedTableColumn
-} from 'drizzle-orm'
+export * from 'drizzle-orm'
