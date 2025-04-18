@@ -7,3 +7,4 @@ export * from './schemas/publicationOperations.schema.js';
 export * from './schemas/operationPrices.schema.js';
 export * from './schemas/credits.schema.js';
 export * from './schemas/creditCharges.schema.js';
+export * from './schemas/publicDatas.schema.js';
